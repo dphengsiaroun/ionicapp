@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { ServicesPage } from '../pages/services/services';
 import { RestaurantMenuPage } from '../pages/restaurantMenu/restaurantMenu';
 
@@ -27,6 +28,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Connexion', component: LoginPage },
+      { title: 'S\'inscrire', component: RegisterPage },
       { title: 'Les services', component: ServicesPage },
       { title: 'La Carte du restaurant', component: RestaurantMenuPage }
     ];

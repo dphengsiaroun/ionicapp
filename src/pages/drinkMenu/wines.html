@@ -1,21 +1,21 @@
 <ion-header>
-  <ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
-    <button ion-button [menuToggle]="activeMenu">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Entrées</ion-title>
-  </ion-navbar>
-  <ion-toolbar no-border-top>
-    <ion-searchbar placeholder="Recherche" (ionInput)="getStarters($event)"></ion-searchbar>
-  </ion-toolbar>
+	<ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
+		<button ion-button [menuToggle]="activeMenu">
+		<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Vins</ion-title>
+	</ion-navbar>
+	<ion-toolbar no-border-top>
+		<ion-searchbar placeholder="Recherche" (ionInput)="getWines($event)"></ion-searchbar>
+	</ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let starter of starters">
-    <img [src]="starter.image" />
+  <ion-card *ngFor="let wine of wines">
+    <img [src]="wine.image" />
 
     <ion-card-content>
-      <ion-card-title [innerHTML]="starter.title"></ion-card-title>
-      <p [innerHTML]="starter.resume"></p>
+      <ion-card-title [innerHTML]="wine.title"></ion-card-title>
+      <p [innerHTML]="wine.resume"></p>
     </ion-card-content>
 
     <ion-row no-padding>
@@ -40,5 +40,4 @@
     </ion-row>
 
   </ion-card>
-
 </ion-content>

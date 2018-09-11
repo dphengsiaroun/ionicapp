@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { ServicesPage } from '../pages/services/services';
 import { RestaurantMenuPage, StarterContentPage, DishesContentPage, DessertsContentPage } from '../pages/restaurantMenu/restaurantMenu';
 
@@ -18,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     ServicesPage,
     RestaurantMenuPage,
     StarterContentPage,
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     ServicesPage,
     RestaurantMenuPage,
     StarterContentPage,

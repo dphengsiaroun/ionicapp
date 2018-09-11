@@ -1,0 +1,22 @@
+.bloc-signup {
+  text-align: center;
+  margin: 1em 0em;
+}
+
+.ios-user {
+  font-size: 10em;
+  color: #989898
+}
+
+ion-list:first-child {
+  margin-top: 32px;
+}
+
+ion-list+ion-list {
+  margin-top: 0;
+}
+
+.btn-signup {
+  text-align: center;
+  padding: 0px 16px;
+}
