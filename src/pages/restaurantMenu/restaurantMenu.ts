@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 
 @Component({
 	templateUrl: 'starter.html'

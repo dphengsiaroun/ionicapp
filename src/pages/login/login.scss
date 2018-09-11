@@ -1,24 +1,32 @@
 page-login {
-	.bloc-login {
-		text-align: center;
-		margin: 3em 0em;
-	}
-	.ios-user {
-		font-size: 10em;
-		color: #dde4ef;
-	}
-	.btn-login {
-		text-align: center;
-		padding: 0px 16px;
-	}
-	.field {
-		background-color: #efefef;
-	}
-	.list-ios[inset] .item {
-		border-bottom: 1px solid #fff;
-	}
-	.label {
-		color: #b9b9b9;
-		font-size: 14px;
-	}
+  .bloc-login {
+    text-align: center;
+    margin: 3em 0em;
+  }
+  .ios-user {
+    font-size: 10em;
+    color: #dde4ef;
+  }
+  .btn-login {
+    text-align: center;
+    padding: 0px 16px;
+  }
+  .field {
+    background-color: #efefef;
+  }
+  .list-ios[inset] .item {
+    border-bottom: 1px solid #fff;
+  }
+  .label {
+    color: #b9b9b9;
+    font-size: 14px;
+  }
+  .bloc-signup-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p {
+      font-size: 1.15em;
+    }
+  }
 }

@@ -26,9 +26,9 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Services', component: ServicesPage },
-      { title: 'RestaurantMenu', component: RestaurantMenuPage }
+      { title: 'Connexion', component: LoginPage },
+      { title: 'Les services', component: ServicesPage },
+      { title: 'La Carte du restaurant', component: RestaurantMenuPage }
     ];
 
   }
