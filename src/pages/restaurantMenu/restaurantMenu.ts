@@ -42,7 +42,7 @@ export class StarterContentPage {
 		];
 	}
 
-	getItems(event: any) {
+	getStarters(event: any) {
 		// Reset items back to all of the items
 		this.initializeStarters();
 
@@ -99,7 +99,7 @@ export class DishesContentPage {
 		];
 	}
 
-	getItems(event: any) {
+	getDishes(event: any) {
 		// Reset items back to all of the items
 		this.initializeDishes();
 
@@ -157,7 +157,7 @@ export class DessertsContentPage {
 		];
 	}
 
-	getItems(event: any) {
+	getDesserts(event: any) {
 		// Reset items back to all of the items
 		this.initializeDesserts();
 
