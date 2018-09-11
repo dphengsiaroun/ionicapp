@@ -1,20 +1,21 @@
 <ion-header>
   <ion-navbar [color]="isAndroid ? 'royal' : 'light'">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Entrées</ion-title>
   </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Recherche" (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card>
-
-    <img src="../../assets/imgs/nin-live.png" />
+  <ion-card *ngFor="let starter of starters">
+    <img [src]="starter.image" />
 
     <ion-card-content>
-      <ion-card-title>
-        Salade Cesar
-      </ion-card-title>
-      <p>
-        The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-      </p>
+      <ion-card-title [innerHTML]="starter.title"></ion-card-title>
+      <p [innerHTML]="starter.resume"></p>
     </ion-card-content>
 
     <ion-row no-padding>
@@ -26,7 +27,7 @@
       </ion-col>
       <ion-col text-center>
         <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='musical-notes'></ion-icon>
+          <ion-icon name='eye'></ion-icon>
           Détails
         </button>
       </ion-col>
@@ -40,117 +41,4 @@
 
   </ion-card>
 
-  <ion-card>
-
-    <div>
-      <img src="../../assets/imgs/badu-live.png" />
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Erykah Badu
-      </ion-card-title>
-      <p>
-        American singer-songwriter, record producer, activist, and actress, Badu's style is a prime example of neo-soul.
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='musical-notes'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-
-  <ion-card>
-
-    <div>
-      <img src="../../assets/imgs/queen-live.png" />
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Queen
-      </ion-card-title>
-      <p>
-        The British rock band formed in London in 1970, and is considered one of the biggest stadium rock bands in the world.
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='musical-notes'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-
-  <ion-card>
-
-    <div>
-      <img src="../../assets/imgs/rundmc-live.png" />
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Run-D.M.C.
-      </ion-card-title>
-      <p>
-        The American hip hop group widely acknowledged as one of the most influential acts in the history of hip hop.
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='musical-notes'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
 </ion-content>
