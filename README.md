@@ -1,5 +1,11 @@
 # IonicApp
 
+## Prerequisites
+Install Ionic
+````
+$ npm install -g ionic cordova
+````
+
 1. Clone the repository
 ````
 $ git clone https://github.com/dphengsiaroun/ionicapp.git
