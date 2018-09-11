@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ServicesPage } from '../pages/services/services';
-import { RestaurantMenuPage, RestaurantMenuContentPage } from '../pages/restaurantMenu/restaurantMenu';
+import { RestaurantMenuPage, StarterContentPage, DishesContentPage, DessertsContentPage } from '../pages/restaurantMenu/restaurantMenu';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +20,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ServicesPage,
     RestaurantMenuPage,
-    RestaurantMenuContentPage
+    StarterContentPage,
+    DishesContentPage,
+    DessertsContentPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ServicesPage,
     RestaurantMenuPage,
-    RestaurantMenuContentPage
+    StarterContentPage,
+    DishesContentPage,
+    DessertsContentPage
   ],
   providers: [
     StatusBar,
