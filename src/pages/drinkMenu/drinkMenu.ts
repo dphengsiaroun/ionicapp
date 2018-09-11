@@ -4,7 +4,7 @@ import { Platform } from 'ionic-angular';
 @Component({
 	templateUrl: 'softs.html'
 })
-export class SoftContentPage {
+export class SoftsContentPage {
 	isAndroid: boolean = false;
 	searchQuery: string = '';
 	softs: Array<{ title: string, resume: string, image: string, fn: string }>;
@@ -176,13 +176,13 @@ export class WinesContentPage {
 @Component({
 	template: `
 	<ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'royal'">
-	  <ion-tab tabIcon="leaf" tabTitle="Entrées" [root]="soft"></ion-tab>
-	  <ion-tab tabIcon="md-restaurant" tabTitle="Plats" [root]="hots"></ion-tab>
-	  <ion-tab tabIcon="md-ice-cream" tabTitle="Wines" [root]="wines"></ion-tab>
+	  <ion-tab tabIcon="leaf" tabTitle="Softs" [root]="soft"></ion-tab>
+	  <ion-tab tabIcon="md-restaurant" tabTitle="Alcools" [root]="hots"></ion-tab>
+	  <ion-tab tabIcon="md-ice-cream" tabTitle="Chaudes" [root]="wines"></ion-tab>
 	</ion-tabs>
 `})
 export class DrinkMenuPage {
-	soft = SoftContentPage;
+	soft = SoftsContentPage;
 	hots = HotsContentPage;
 	wines = WinesContentPage;
 

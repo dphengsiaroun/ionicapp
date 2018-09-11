@@ -20,6 +20,12 @@ export class ServicesPage {
       },
       {
         title: 'La carte',
+        subtitle: 'des boissons',
+        image: '../../assets/imgs/vins.jpg',
+        fn: 'wineMenu'
+      },
+      {
+        title: 'La carte',
         subtitle: 'des vins',
         image: '../../assets/imgs/vins.jpg',
         fn: 'wineMenu'
