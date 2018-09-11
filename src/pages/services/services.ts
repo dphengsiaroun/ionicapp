@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { RestaurantMenuPage } from '../restaurantMenu/restaurantMenu';
+import { DrinkMenuPage } from '../drinkMenu/drinkMenu';
 
 @Component({
   selector: 'page-services',
@@ -21,8 +22,8 @@ export class ServicesPage {
       {
         title: 'La carte',
         subtitle: 'des boissons',
-        image: '../../assets/imgs/vins.jpg',
-        fn: 'wineMenu'
+        image: '../../assets/imgs/soda.jpg',
+        fn: 'drinkMenu'
       },
       {
         title: 'La carte',
@@ -52,9 +53,9 @@ export class ServicesPage {
       console.log('restaurantMenu');
       this.navCtrl.push(RestaurantMenuPage);
       break;
-      case 'wineMenu':
-      console.log('wineMenu');
-      this.navCtrl.push(ListPage);      
+      case 'drinkMenu':
+      console.log('drinkMenu');
+      this.navCtrl.push(DrinkMenuPage);      
       break;      
       case 'callWaiter':
       console.log('callWaiter');

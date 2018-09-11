@@ -17,25 +17,25 @@ export class StarterContentPage {
 		this.starters = [
 			{
 				title: 'Salade Cesar',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'La salade César est une salade principalement composée de laitue romaine, de parmesan, d\'œufs durs et de croûtons, arrosée de sa « sauce César » faite de parmesan râpé, d\'huile d\'olive, de pâte d\'anchois, d\'ail, de vinaigre de vin, de moutarde et d\'un jaune d\'œuf.',
 				image: '../../assets/imgs/salade-cesar.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
 				title: 'Tomate mozarella',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'La salade caprese est composée de tomates et de mozzarella en tranches, généralement alternées, et parsemées de feuilles de basilic frais ciselées ; elle peut être servie en hors-d\'œuvre ou en plat principal, et est assaisonnée d\'un filet d\'huile d\'olive vierge extra ainsi que de sel et de poivre.',
 				image: '../../assets/imgs/tomate-moza.jpg',
 				fn: 'wineMenu'
 			},
 			{
-				title: 'Oeuf mayonnaise',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				title: 'Oeuf mimosa',
+				resume: 'L\'œuf mimosa est une entrée qui consiste en un œuf dur, coupé en deux, dont le jaune a été enlevé, mélangé avec de la mayonnaise et des herbes, puis replacé dans le blanc. Un peu du jaune cuit est émietté dessus à la fin, ressemblant à du mimosa.',
 				image: '../../assets/imgs/oeuf-mayo.jpg',
 				fn: 'callWaiter'
 			},
 			{
 				title: 'Carpaccio de boeuf',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Le carpaccio est une préparation culinaire typique de la cuisine italienne, à base de viande de bœuf crue, coupée en tranches très fines, assaisonnée traditionnellement d\'un filet d\'huile d\'olive, jus de citron, sel, poivre et parsemé (ou non) de copeaux de parmigiano reggiano (parmesan) ou de pecorino.',
 				image: '../../assets/imgs/carpaccio.jpg',
 				fn: 'customerReview'
 			},

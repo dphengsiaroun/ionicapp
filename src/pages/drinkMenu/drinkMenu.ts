@@ -16,25 +16,25 @@ export class SoftsContentPage {
 	initializeSofts() {
 		this.softs = [
 			{
-				title: 'Salade Cesar',
+				title: 'Coca-Cola',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/menu.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
-				title: 'Tomate mozarella',
+				title: 'Jus d\'orange',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/vins.jpg',
-				fn: 'wineMenu'
+				fn: 'alcoolMenu'
 			},
 			{
-				title: 'Oeuf mayonnaise',
+				title: 'Ice Tea',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/waiter.jpg',
 				fn: 'callWaiter'
 			},
 			{
-				title: 'Carpaccio de boeuf',
+				title: 'Limonade',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/clients.jpg',
 				fn: 'customerReview'
@@ -73,25 +73,25 @@ export class HotsContentPage {
 	initializeHots() {
 		this.hots = [
 			{
-				title: 'Tagliatelle au saumon',
+				title: 'Café gourmand',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/menu.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
-				title: 'Escalope à la milanese',
+				title: 'Expresso',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/vins.jpg',
-				fn: 'wineMenu'
+				fn: 'alcoolMenu'
 			},
 			{
-				title: 'Boeuf bourguignon',
+				title: 'Thé',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/waiter.jpg',
 				fn: 'callWaiter'
 			},
 			{
-				title: 'Poulet braisé',
+				title: 'Chocolat viennois',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/clients.jpg',
 				fn: 'customerReview'
@@ -116,20 +116,20 @@ export class HotsContentPage {
 }
 
 @Component({
-	templateUrl: 'wines.html'
+	templateUrl: 'alcools.html'
 })
-export class WinesContentPage {
+export class AlcoolsContentPage {
 
 	isAndroid: boolean = false;
 	searchQuery: string = '';
-	wines: Array<{ title: string, resume: string, image: string, fn: string }>;
+	alcools: Array<{ title: string, resume: string, image: string, fn: string }>;
 	constructor(platform: Platform) {
 		this.isAndroid = platform.is('android');
-		this.initializeWines();
+		this.initializeAlcools();
 	}
 
-	initializeWines() {
-		this.wines = [
+	initializeAlcools() {
+		this.alcools = [
 			{
 				title: 'Caramel brulé',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
@@ -140,7 +140,7 @@ export class WinesContentPage {
 				title: 'Flan',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 				image: '../../assets/imgs/vins.jpg',
-				fn: 'wineMenu'
+				fn: 'alcoolMenu'
 			},
 			{
 				title: 'Framboisier',
@@ -157,17 +157,17 @@ export class WinesContentPage {
 		];
 	}
 
-	getWines(event: any) {
+	getAlcools(event: any) {
 		// Reset items back to all of the items
-		this.initializeWines();
+		this.initializeAlcools();
 
 		// set val to the value of the searchbar
 		const val = event.target.value;
 
 		// if the value is an empty string don't filter the items
 		if (val && val.trim() != '') {
-			this.wines = this.wines.filter((wine) => {
-				return (wine.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+			this.alcools = this.alcools.filter((alcool) => {
+				return (alcool.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
 			})
 		}
 	}
@@ -176,15 +176,15 @@ export class WinesContentPage {
 @Component({
 	template: `
 	<ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'royal'">
-	  <ion-tab tabIcon="leaf" tabTitle="Softs" [root]="soft"></ion-tab>
-	  <ion-tab tabIcon="md-restaurant" tabTitle="Alcools" [root]="hots"></ion-tab>
-	  <ion-tab tabIcon="md-ice-cream" tabTitle="Chaudes" [root]="wines"></ion-tab>
+	  <ion-tab tabIcon="md-pint" tabTitle="Softs" [root]="soft"></ion-tab>
+	  <ion-tab tabIcon="md-beer" tabTitle="Alcools" [root]="alcools"></ion-tab>
+	  <ion-tab tabIcon="md-cafe" tabTitle="Chaudes" [root]="hots"></ion-tab>
 	</ion-tabs>
 `})
 export class DrinkMenuPage {
 	soft = SoftsContentPage;
+	alcools = AlcoolsContentPage;
 	hots = HotsContentPage;
-	wines = WinesContentPage;
 
 	isAndroid: boolean = false;
 

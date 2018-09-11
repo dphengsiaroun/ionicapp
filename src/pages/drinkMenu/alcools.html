@@ -3,19 +3,19 @@
 		<button ion-button [menuToggle]="activeMenu">
 		<ion-icon name="menu"></ion-icon>
 		</button>
-		<ion-title>Vins</ion-title>
+		<ion-title>Alcools</ion-title>
 	</ion-navbar>
 	<ion-toolbar no-border-top>
 		<ion-searchbar placeholder="Recherche" (ionInput)="getWines($event)"></ion-searchbar>
 	</ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let wine of wines">
-    <img [src]="wine.image" />
+  <ion-card *ngFor="let alcool of alcools">
+    <img [src]="alcool.image" />
 
     <ion-card-content>
-      <ion-card-title [innerHTML]="wine.title"></ion-card-title>
-      <p [innerHTML]="wine.resume"></p>
+      <ion-card-title [innerHTML]="alcool.title"></ion-card-title>
+      <p [innerHTML]="alcool.resume"></p>
     </ion-card-content>
 
     <ion-row no-padding>
@@ -37,7 +37,14 @@
           Partager
         </button>
       </ion-col>
+      <ion-col text-center>
+        <button ion-button round small color="primary" icon-start>
+          <ion-icon name='md-cart'></ion-icon>
+          Ajouter
+        </button>
+      </ion-col>
     </ion-row>
+
 
   </ion-card>
 </ion-content>

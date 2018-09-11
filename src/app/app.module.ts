@@ -9,7 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ServicesPage } from '../pages/services/services';
 import { RestaurantMenuPage, StarterContentPage, DishesContentPage, DessertsContentPage } from '../pages/restaurantMenu/restaurantMenu';
-import { DrinkMenuPage, SoftsContentPage, HotsContentPage, WinesContentPage } from '../pages/drinkMenu/drinkMenu';
+import { DrinkMenuPage, SoftsContentPage, HotsContentPage, AlcoolsContentPage } from '../pages/drinkMenu/drinkMenu';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DrinkMenuPage,
     SoftsContentPage,
     HotsContentPage,
-    WinesContentPage
+    AlcoolsContentPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DrinkMenuPage,
     SoftsContentPage,
     HotsContentPage,
-    WinesContentPage
+    AlcoolsContentPage
   ],
   providers: [
     StatusBar,
