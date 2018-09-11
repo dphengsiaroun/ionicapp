@@ -18,25 +18,25 @@ export class StarterContentPage {
 			{
 				title: 'Salade Cesar',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
+				image: '../../assets/imgs/salade-cesar.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
 				title: 'Tomate mozarella',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
+				image: '../../assets/imgs/tomate-moza.jpg',
 				fn: 'wineMenu'
 			},
 			{
 				title: 'Oeuf mayonnaise',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
+				image: '../../assets/imgs/oeuf-mayo.jpg',
 				fn: 'callWaiter'
 			},
 			{
 				title: 'Carpaccio de boeuf',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
+				image: '../../assets/imgs/carpaccio.jpg',
 				fn: 'customerReview'
 			},
 		];
@@ -75,25 +75,25 @@ export class DishesContentPage {
 			{
 				title: 'Tagliatelle au saumon',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
+				image: '../../assets/imgs/tagliatelle-saumon.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
 				title: 'Escalope à la milanese',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
+				image: '../../assets/imgs/escalope-milanese.jpg',
 				fn: 'wineMenu'
 			},
 			{
 				title: 'Boeuf bourguignon',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
+				image: '../../assets/imgs/boeuf-bourguignon.jpg',
 				fn: 'callWaiter'
 			},
 			{
 				title: 'Poulet braisé',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
+				image: '../../assets/imgs/poulet-braise.jpg',
 				fn: 'customerReview'
 			},
 		];
@@ -131,27 +131,27 @@ export class DessertsContentPage {
 	initializeDesserts() {
 		this.desserts = [
 			{
-				title: 'Caramel brulé',
+				title: 'Crème brulé',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
+				image: '../../assets/imgs/creme-brule.jpg',
 				fn: 'restaurantMenu'
 			},
 			{
 				title: 'Flan',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
+				image: '../../assets/imgs/flan.jpg',
 				fn: 'wineMenu'
 			},
 			{
-				title: 'Framboisier',
+				title: 'Assortiment de macaron',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
+				image: '../../assets/imgs/macarons.jpg',
 				fn: 'callWaiter'
 			},
 			{
 				title: 'Tarte Tatin',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
+				image: '../../assets/imgs/tarte-tatin.jpg',
 				fn: 'customerReview'
 			},
 		];
