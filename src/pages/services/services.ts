@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
+import { RestaurantMenuPage } from '../restaurantMenu/restaurantMenu';
 
 @Component({
   selector: 'page-services',
@@ -26,7 +27,7 @@ export class ServicesPage {
       {
         title: 'Appeler',
         subtitle: 'un serveur',
-        image: '../../assets/imgs/bell.png',
+        image: '../../assets/imgs/waiter.jpg',
         fn: 'callWaiter'
       },
       {
@@ -43,7 +44,7 @@ export class ServicesPage {
     switch (name) {
       case 'restaurantMenu':
       console.log('restaurantMenu');
-      this.navCtrl.push(ListPage);
+      this.navCtrl.push(RestaurantMenuPage);
       break;
       case 'wineMenu':
       console.log('wineMenu');
