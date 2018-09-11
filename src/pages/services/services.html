@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nos services</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <div *ngFor="let service of myServices">
+    <ion-card (click)="callFn(service.fn)">
+      <img [src]="service.image" />
+      <div class="card-title" [innerHTML]="service.title"></div>
+      <div class="card-subtitle" [innerHTML]="service.subtitle"></div>
+    </ion-card>
+  </div>
+
+</ion-content>

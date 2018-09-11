@@ -29,7 +29,7 @@ export class HomePage {
 	  ];
 	}
 
-	gotoLogin(page) {
+	gotoLogin() {
 		console.log('gotoLogin', this.navCtrl);
 		this.navCtrl.push(LoginPage);
 	}
