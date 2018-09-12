@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { RestaurantMenuPage } from '../restaurantMenu/restaurantMenu';
 import { DrinkMenuPage } from '../drinkMenu/drinkMenu';
+import { WineMenuPage } from '../wineMenu/wineMenu';
 
 @Component({
   selector: 'page-services',
@@ -56,6 +57,10 @@ export class ServicesPage {
       case 'drinkMenu':
       console.log('drinkMenu');
       this.navCtrl.push(DrinkMenuPage);      
+      break;      
+      case 'wineMenu':
+      console.log('wineMenu');
+      this.navCtrl.push(WineMenuPage);      
       break;      
       case 'callWaiter':
       console.log('callWaiter');

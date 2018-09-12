@@ -7,7 +7,7 @@ import { Platform } from 'ionic-angular';
 export class SoftsContentPage {
 	isAndroid: boolean = false;
 	searchQuery: string = '';
-	softs: Array<{ title: string, resume: string, image: string, fn: string }>;
+	softs: Array<{ title: string, size: string }>;
 	constructor(platform: Platform) {
 		this.isAndroid = platform.is('android');
 		this.initializeSofts();
@@ -17,27 +17,19 @@ export class SoftsContentPage {
 		this.softs = [
 			{
 				title: 'Coca-Cola',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
-				fn: 'restaurantMenu'
+				size: '33cl',
 			},
 			{
 				title: 'Jus d\'orange',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
-				fn: 'alcoolMenu'
+				size: '33cl',
 			},
 			{
 				title: 'Ice Tea',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
-				fn: 'callWaiter'
+				size: '33cl',
 			},
 			{
 				title: 'Limonade',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
-				fn: 'customerReview'
+				size: '33cl',
 			},
 		];
 	}
@@ -64,7 +56,7 @@ export class SoftsContentPage {
 export class HotsContentPage {
 	isAndroid: boolean = false;
 	searchQuery: string = '';
-	hots: Array<{ title: string, resume: string, image: string, fn: string }>;
+	hots: Array<{ title: string, resume: string }>;
 	constructor(platform: Platform) {
 		this.isAndroid = platform.is('android');
 		this.initializeHots();
@@ -75,26 +67,18 @@ export class HotsContentPage {
 			{
 				title: 'Café gourmand',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
-				fn: 'restaurantMenu'
 			},
 			{
 				title: 'Expresso',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
-				fn: 'alcoolMenu'
 			},
 			{
 				title: 'Thé',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
-				fn: 'callWaiter'
 			},
 			{
 				title: 'Chocolat viennois',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
-				fn: 'customerReview'
 			},
 		];
 	}
@@ -122,39 +106,43 @@ export class AlcoolsContentPage {
 
 	isAndroid: boolean = false;
 	searchQuery: string = '';
-	alcools: Array<{ title: string, resume: string, image: string, fn: string }>;
+	alcools: Array<{ category: string, items: [{ title: string, resume: string }] }>;
 	constructor(platform: Platform) {
 		this.isAndroid = platform.is('android');
 		this.initializeAlcools();
 	}
 
 	initializeAlcools() {
-		this.alcools = [
-			{
-				title: 'Caramel brulé',
+		this.alcools = [{
+			category: 'Bière',
+			items: [{
+				title: 'Heineken',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/menu.jpg',
-				fn: 'restaurantMenu'
+			}, {
+				title: 'Desperados',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+			}],
+		}, {
+			category: 'Whisky',
+			items: [{
+				title: 'Jack',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 			},
 			{
-				title: 'Flan',
+				title: 'JB',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/vins.jpg',
-				fn: 'alcoolMenu'
+			}],
+		}, {
+			category: 'Champagne',
+			items: [{
+				title: 'Moet & Chandon',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
 			},
 			{
-				title: 'Framboisier',
+				title: 'Nicolas',
 				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/waiter.jpg',
-				fn: 'callWaiter'
-			},
-			{
-				title: 'Tarte Tatin',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
-				image: '../../assets/imgs/clients.jpg',
-				fn: 'customerReview'
-			},
-		];
+			}],
+		}];
 	}
 
 	getAlcools(event: any) {
@@ -167,7 +155,58 @@ export class AlcoolsContentPage {
 		// if the value is an empty string don't filter the items
 		if (val && val.trim() != '') {
 			this.alcools = this.alcools.filter((alcool) => {
-				return (alcool.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+				console.log('xxx', alcool.items[0].title);
+				return (alcool.items[0].title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+			})
+		}
+	}
+}
+
+@Component({
+	templateUrl: 'cocktails.html'
+})
+export class CocktailsContentPage {
+
+	isAndroid: boolean = false;
+	searchQuery: string = '';
+	cocktails: Array<{ title: string, resume: string }>;
+	constructor(platform: Platform) {
+		this.isAndroid = platform.is('android');
+		this.initializeCocktails();
+	}
+
+	initializeCocktails() {
+		this.cocktails = [
+			{
+				title: 'Mojito',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+			},
+			{
+				title: 'Sun Paradise',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+			},
+			{
+				title: 'Tropical',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+			},
+			{
+				title: 'Strawberry',
+				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+			},
+		];
+	}
+
+	getCocktails(event: any) {
+		// Reset items back to all of the items
+		this.initializeCocktails();
+
+		// set val to the value of the searchbar
+		const val = event.target.value;
+
+		// if the value is an empty string don't filter the items
+		if (val && val.trim() != '') {
+			this.cocktails = this.cocktails.filter((cocktail) => {
+				return (cocktail.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
 			})
 		}
 	}
@@ -177,12 +216,14 @@ export class AlcoolsContentPage {
 	template: `
 	<ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'royal'">
 	  <ion-tab tabIcon="md-pint" tabTitle="Softs" [root]="soft"></ion-tab>
+	  <ion-tab tabIcon="md-wine" tabTitle="Cocktails" [root]="cocktails"></ion-tab>
 	  <ion-tab tabIcon="md-beer" tabTitle="Alcools" [root]="alcools"></ion-tab>
 	  <ion-tab tabIcon="md-cafe" tabTitle="Chaudes" [root]="hots"></ion-tab>
 	</ion-tabs>
 `})
 export class DrinkMenuPage {
 	soft = SoftsContentPage;
+	cocktails = CocktailsContentPage;
 	alcools = AlcoolsContentPage;
 	hots = HotsContentPage;
 

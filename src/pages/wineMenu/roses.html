@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Rosés</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Recherche" (ionInput)="getRoses($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let rose of roses">
+    <img [src]="rose.image" />
+
+    <ion-card-content>
+      <ion-card-title [innerHTML]="rose.title"></ion-card-title>
+      <p [innerHTML]="rose.resume"></p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="primary" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Avis
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="primary" icon-start>
+          <ion-icon name='eye'></ion-icon>
+          Détails
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="primary" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Partager
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button round small color="primary" icon-start>
+          <ion-icon name='md-cart'></ion-icon>
+          Ajouter
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

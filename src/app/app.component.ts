@@ -10,6 +10,7 @@ import { RegisterPage } from '../pages/register/register';
 import { ServicesPage } from '../pages/services/services';
 import { RestaurantMenuPage } from '../pages/restaurantMenu/restaurantMenu';
 import { DrinkMenuPage } from '../pages/drinkMenu/drinkMenu';
+import { WineMenuPage } from '../pages/wineMenu/wineMenu';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,7 +33,8 @@ export class MyApp {
       { title: 'S\'inscrire', component: RegisterPage },
       { title: 'Les services', component: ServicesPage },
       { title: 'La Carte du restaurant', component: RestaurantMenuPage },
-      { title: 'La Carte des boissons', component: DrinkMenuPage }
+      { title: 'La Carte des boissons', component: DrinkMenuPage },
+      { title: 'La Carte des vins', component: WineMenuPage }
     ];
 
   }

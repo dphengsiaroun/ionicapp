@@ -10,41 +10,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let soft of softs">
-    <img [src]="soft.image" />
-
-    <ion-card-content>
-      <ion-card-title [innerHTML]="soft.title"></ion-card-title>
-      <p [innerHTML]="soft.resume"></p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='eye'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button round small color="primary" icon-start>
-          <ion-icon name='md-cart'></ion-icon>
-          Ajouter
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-
+  <ion-list>
+    <ion-item *ngFor="let soft of softs">
+      <h2 [innerHTML]="soft.title"></h2>
+      <p [innerHTML]="soft.size"></p>
+      <p>9,90€</p>
+      <button ion-button clear item-end><ion-icon name="md-cart"></ion-icon></button>      
+    </ion-item>
+  </ion-list>
 </ion-content>
