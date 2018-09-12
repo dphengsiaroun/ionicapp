@@ -36,7 +36,6 @@ export class MyApp {
 			{ title: 'La Carte des boissons', component: DrinkMenuPage },
 			{ title: 'La Carte des vins', component: WineMenuPage }
 		];
-
 	}
 
 	initializeApp() {
