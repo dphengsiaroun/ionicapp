@@ -68,7 +68,7 @@ export class StarterContentPage {
 export class DishesContentPage {
 	isAndroid: boolean = false;
 	searchQuery: string = '';
-	dishes: Array<{ title: string, resume: string, image: string, fn: string }>;
+	dishes: Array<{ title: string, price: string, resume: string, image: string, fn: string }>;
 	constructor(platform: Platform) {
 		this.isAndroid = platform.is('android');
 		this.initializeDishes();
