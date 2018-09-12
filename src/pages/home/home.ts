@@ -12,8 +12,8 @@ export class HomePage {
 	constructor(public navCtrl: NavController) {
 		this.slides = [
 			{
-			title: "Bienvenue dans notre restaurant 2.0",
-			description: "Accèder à tous les services du restaurant depuis <b>notre application</b> (carte du restaurant, serveur, plan, avis client...).",
+			title: "Bienvenue dans notre resto 2.0",
+			description: "Accèder à tous les services du restaurant depuis <b>l'application</b> (carte du restaurant, serveur, avis client...).",
 			image: "../../assets/imgs/ica-slidebox-img-1.png",
 			},
 			{
@@ -23,7 +23,7 @@ export class HomePage {
 			},
 			{
 			title: "Facilité la prise de commande",
-			description: "<b>Choisir de commander</b> depuis notre application, c'est garantir une meilleur qualité de service.",
+			description: "<b>Choisir de commander</b> depuis l'application, c'est garantir une meilleur qualité de service.",
 			image: "../../assets/imgs/serving-dish.png",
 			}
 	  ];
