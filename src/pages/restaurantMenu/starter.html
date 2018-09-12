@@ -9,43 +9,16 @@
     <ion-searchbar placeholder="Recherche" (ionInput)="getStarters($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-card *ngFor="let starter of starters">
-    <img [src]="starter.image" />
+<ion-content class="card-background-page">
 
-    <ion-card-content>
-      <ion-card-title [innerHTML]="starter.title"></ion-card-title>
-      <p [innerHTML]="starter.resume"></p>
-      <p>9,90€</p>      
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='eye'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button round small color="primary" icon-start>
-          <ion-icon name='md-cart'></ion-icon>
-          Ajouter
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
+  <div *ngFor="let starter of starters">
+    <ion-card (click)="callFn(starter.fn)">
+      <div class="product">
+        <img [src]="starter.image" />
+      </div>
+      <div class="card-title" [innerHTML]="starter.title"></div>
+      <div class="card-subtitle" [innerHTML]="starter.price"></div>
+    </ion-card>
+  </div>
 
 </ion-content>

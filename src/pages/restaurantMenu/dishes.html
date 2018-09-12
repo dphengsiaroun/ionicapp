@@ -1,50 +1,25 @@
 <ion-header>
-	<ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
-		<button ion-button [menuToggle]="activeMenu">
-		<ion-icon name="menu"></ion-icon>
-		</button>
-		<ion-title>Plats</ion-title>
-	</ion-navbar>
-	<ion-toolbar no-border-top>
-		<ion-searchbar placeholder="Recherche" (ionInput)="getDishes($event)"></ion-searchbar>
-	</ion-toolbar>
+  <ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Plats</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Recherche" (ionInput)="getDishes($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-card *ngFor="let dishe of dishes">
-    <img [src]="dishe.image" />
+<ion-content class="card-background-page">
 
-    <ion-card-content>
-      <ion-card-title [innerHTML]="dishe.title"></ion-card-title>
-      <p [innerHTML]="dishe.resume"></p>
-      <p>9,90€</p>     
-    </ion-card-content>
+  <div *ngFor="let dishe of dishes">
+    <ion-card (click)="callFn(dishe.fn)">
+      <div class="product">
+        <img [src]="dishe.image" />
+      </div>
+      <div class="card-title" [innerHTML]="dishe.title"></div>
+      <div class="card-subtitle" [innerHTML]="dishe.price"></div>
+      
+    </ion-card>
+  </div>
 
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='eye'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button round small color="primary" icon-start>
-          <ion-icon name='md-cart'></ion-icon>
-          Ajouter
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
 </ion-content>

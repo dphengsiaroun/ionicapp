@@ -10,42 +10,16 @@
     <ion-searchbar placeholder="Recherche" (ionInput)="getDesserts($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-card *ngFor="let dessert of desserts">
-    <img [src]="dessert.image" />
+<ion-content class="card-background-page">
 
-    <ion-card-content>
-      <ion-card-title [innerHTML]="dessert.title"></ion-card-title>
-      <p [innerHTML]="dessert.resume"></p>
-      <p>9,90€</p>
-    </ion-card-content>
+  <div *ngFor="let dessert of desserts">
+    <ion-card (click)="callFn(dessert.fn)">
+      <div class="product">
+        <img [src]="dessert.image" />
+      </div>
+      <div class="card-title" [innerHTML]="dessert.title"></div>
+      <div class="card-subtitle" [innerHTML]="dessert.price"></div>
+    </ion-card>
+  </div>
 
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Avis
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='eye'></ion-icon>
-          Détails
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Partager
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button round small color="primary" icon-start>
-          <ion-icon name='md-cart'></ion-icon>
-          Ajouter
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
 </ion-content>
