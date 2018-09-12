@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { ServicesPage } from '../services/services';
 
 
 @Component({
@@ -29,9 +29,9 @@ export class HomePage {
 	  ];
 	}
 
-	gotoLogin() {
-		console.log('gotoLogin', this.navCtrl);
-		this.navCtrl.push(LoginPage);
+	gotoServices() {
+		console.log('gotoServices');
+		this.navCtrl.push(ServicesPage);
 	}
 
 	
