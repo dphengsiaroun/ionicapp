@@ -66,19 +66,19 @@ export class HotsContentPage {
 		this.hots = [
 			{
 				title: 'Café gourmand',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Expresso',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Thé',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Chocolat viennois',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 		];
 	}
@@ -117,30 +117,30 @@ export class AlcoolsContentPage {
 			category: 'Bière',
 			items: [{
 				title: 'Heineken',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			}, {
 				title: 'Desperados',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			}],
 		}, {
 			category: 'Whisky',
 			items: [{
 				title: 'Jack',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'JB',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			}],
 		}, {
 			category: 'Champagne',
 			items: [{
 				title: 'Moet & Chandon',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Nicolas',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			}],
 		}];
 	}
@@ -179,19 +179,19 @@ export class CocktailsContentPage {
 		this.cocktails = [
 			{
 				title: 'Mojito',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Sun Paradise',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Tropical',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 			{
 				title: 'Strawberry',
-				resume: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.du restaurant.',
+				resume: 'Drinking',
 			},
 		];
 	}

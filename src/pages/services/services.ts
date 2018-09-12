@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { RestaurantMenuPage } from '../restaurantMenu/restaurantMenu';
 import { DrinkMenuPage } from '../drinkMenu/drinkMenu';
@@ -12,7 +12,7 @@ import { WineMenuPage } from '../wineMenu/wineMenu';
 
 export class ServicesPage {
   myServices: Array<{title: string, subtitle: string, image: string, fn: string}>;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     this.myServices = [
       {
         title: 'La carte',
@@ -47,6 +47,15 @@ export class ServicesPage {
     ];
   }
 
+  callWaiter() {
+    const toast = this.toastCtrl.create({
+      message: 'Votre appel a bien été envoyé. Un serveur arrivera dans quelques instants.',
+      showCloseButton: true,
+      closeButtonText: 'Ok'
+    });
+    toast.present();
+  }
+
   callFn(name) {
     console.log('name', name);
     switch (name) {
@@ -64,7 +73,7 @@ export class ServicesPage {
       break;      
       case 'callWaiter':
       console.log('callWaiter');
-      this.navCtrl.push(ListPage);      
+      this.callWaiter();
       break;      
       case 'customerReview':
       console.log('customerReview');

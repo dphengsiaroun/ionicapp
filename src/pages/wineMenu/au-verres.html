@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar [color]="isAndroid ? 'royal' : 'dark'">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Au verres</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Recherche" (ionInput)="getAuVerres($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let auVerre of auVerres">
+      <h2 [innerHTML]="auVerre.title"></h2>
+      <p [innerHTML]="auVerre.size"></p>
+      <p>9,90€</p>
+      <button ion-button clear item-end><ion-icon name="md-cart"></ion-icon></button>      
+    </ion-item>
+  </ion-list>
+</ion-content>
